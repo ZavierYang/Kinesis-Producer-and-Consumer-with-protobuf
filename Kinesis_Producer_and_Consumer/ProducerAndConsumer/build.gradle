@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.protobuf:protobuf-java:3.21.1'
+
+    // https://mvnrepository.com/artifact/com.amazonaws/amazon-kinesis-producer
+    implementation group: 'com.amazonaws', name: 'amazon-kinesis-producer', version: '0.14.6'
+    // https://mvnrepository.com/artifact/software.amazon.kinesis/amazon-kinesis-client
+    implementation group: 'software.amazon.kinesis', name: 'amazon-kinesis-client', version: '2.4.0'
+    // https://mvnrepository.com/artifact/org.apache.avro/avro
+    implementation group: 'org.apache.avro', name: 'avro', version: '1.8.2'
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-core
+    implementation group: 'org.apache.hadoop', name: 'hadoop-core', version: '1.2.1'
+    // https://mvnrepository.com/artifact/org.apache.parquet/parquet-hadoop
+    implementation group: 'org.apache.parquet', name: 'parquet-hadoop', version: '1.8.1'
+    // https://mvnrepository.com/artifact/org.apache.parquet/parquet-avro
+    implementation group: 'org.apache.parquet', name: 'parquet-avro', version: '1.8.1'
+    // https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk
+    implementation group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.11.163'
+    // https://mvnrepository.com/artifact/org.apache.parquet/parquet-protobuf
+    implementation group: 'org.apache.parquet', name: 'parquet-protobuf', version: '1.12.2'
+
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}

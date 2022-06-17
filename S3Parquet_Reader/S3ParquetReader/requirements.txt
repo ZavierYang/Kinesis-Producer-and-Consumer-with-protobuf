@@ -1,0 +1,4 @@
+boto3
+fastparquet
+pyarrow
+s3fs

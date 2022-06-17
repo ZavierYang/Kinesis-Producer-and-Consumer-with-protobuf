@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: CloudFormation template for practice.
+
+Resources:
+  # Since this is for practice, I do not set the lifecycle rule.
+  ZavierStorage:
+    Type: 'AWS::S3::Bucket'
+    Properties: 
+        BucketName: zavierstorage
+
+  ZavierStreamming:
+    Type: 'AWS::Kinesis::Stream'
+    Properties:
+      Name: ZavierStreamming
+      ShardCount: 1
